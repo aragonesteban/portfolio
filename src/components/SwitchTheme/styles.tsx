@@ -13,6 +13,14 @@ export const SwitchContainer = styled.div`
   border:  1px solid #424654;
   position: absolute;
   right: 5%;
+
+  @media only screen and (max-width: 480px) {
+    position: unset;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    margin-bottom: 24px;
+  }
 `
 
 export const SwitchOption = styled.span`

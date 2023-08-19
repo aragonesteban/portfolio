@@ -4,7 +4,15 @@ export const NavBarContainer = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    @media only screen and (max-width: 480px) {
+        position: unset;
+        padding: 2em 0;
+    }
 `
 
 interface NavBarItemContainerProps {
@@ -19,6 +27,9 @@ export const NavBarItemContainer = styled.div<NavBarItemContainerProps>`
     height: 50px;
     padding: 2em 0;
     cursor: pointer;
+    @media only screen and (max-width: 480px) {
+        display: none;
+    }
 `
 
 export const NavBarItemIndicator = styled.div`
@@ -28,4 +39,7 @@ export const NavBarItemIndicator = styled.div`
     border-radius: 50%;
     margin: 0 auto;
     margin-top: 8px;
+    @media only screen and (max-width: 480px) {
+        display: none;
+    }
 `
