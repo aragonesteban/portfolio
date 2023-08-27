@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme, ThemesType } from './config/theme';
@@ -12,6 +13,7 @@ import backgroundLight from './assets/background_light.png';
 
 import Home from './pages/Home/Home';
 import ArrowNavigate from './components/ArrowNavigate/ArrowNavigate';
+import Loading from './pages/Loading/Loading';
 
 const App: React.FC = () => {
 
@@ -33,14 +35,19 @@ const App: React.FC = () => {
   }, [isDarkMode])
 
   return (
-    <ThemeProvider theme={themeMode}>
-      <AppContainer id='app'>
-        <GlobalStyles />
-        <NavBar themeToggler={themeToggler} />
-        <Home />
-        <ArrowNavigate />
-      </AppContainer>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={themeMode}>
+        <AppContainer id='app'>
+          <GlobalStyles />
+          <NavBar themeToggler={themeToggler} />
+          <Routes>
+            <Route path="/" element={<Loading />} />
+            <Route path="/home" element={<Home />} />
+          </Routes>
+          <ArrowNavigate />
+        </AppContainer>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 

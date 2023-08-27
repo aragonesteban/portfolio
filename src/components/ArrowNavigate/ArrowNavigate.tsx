@@ -7,7 +7,7 @@ const ArrowNavigate: React.FC = () => {
   const theme = useTheme()
   return (
     <ArrowNavigateContainer>
-         <ArrowForward color={theme.textColor} fontSize="large"/>
+         <ArrowForward style={{fontSize: 50}} color={theme.textColor} fontSize="large"/>
     </ArrowNavigateContainer>
   )
 }

@@ -8,7 +8,7 @@ export const ArrowNavigateContainer = styled.div`
     animation: springAnimation 2s infinite linear;
     cursor: pointer;
 
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @media only screen and (min-width: 768px) {
         margin-bottom: 24px;
         top: unset;
         bottom: 0;

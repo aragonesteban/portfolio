@@ -4,6 +4,11 @@ export const HomeContainer = styled.main`
     display: grid;
     grid-template-columns: 40% 60%;
     height: -webkit-fill-available;
+    animation: fadeInShine 2s;
+    animation-fill-mode: forwards; /* Mantener el estado final después de la animación */
+    animation-iteration-count: 1; /* Ejecutar la animación solo una vez */
+
+
     @media only screen and (max-width: 480px) {
         display: flex;
         flex-direction: column;
@@ -14,6 +19,15 @@ export const HomeContainer = styled.main`
     }
     @media only screen and (min-width: 1024px) {
         grid-template-columns: 40% 60%;
+    }
+
+    @keyframes fadeInShine {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 `
 
@@ -122,6 +136,9 @@ export const HomeGraficsImg = styled.img<HomeGraficsImgProps>`
     @media only screen and (min-width: 1024px) {
         height: 540px;
         position: absolute;
+    }
+    @media screen and (min-width: 1025px) {
+        height: 800px;
     }
 `
 

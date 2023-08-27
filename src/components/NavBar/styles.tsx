@@ -33,8 +33,8 @@ export const NavBarItemContainer = styled.div<NavBarItemContainerProps>`
 `
 
 export const NavBarItemIndicator = styled.div`
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background-color: #7BDAF8;
     border-radius: 50%;
     margin: 0 auto;
